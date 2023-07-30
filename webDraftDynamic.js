@@ -75,8 +75,6 @@ let rowsPedal; //row number of Pedals
 let cols;
 let rows;
 //------------------------------------------
-//let space; //space between main rectange boxes
-//let margin; //width of one little square
 let bord; //bordures between bars
 let w; //each little box width
 let h; //each little box height
@@ -98,8 +96,8 @@ let shiftPedalVal = 0;
 let x = 0;
 let y = 0;
 //--------------------------------------------
-let myButton; //button for entering text
-let myInp; //text input inside bar
+var myButton; //button for entering text
+var myInp; //text input inside bar
 //let sliderBackgrnd;
 //--------------------------------------------
 let tieUpDataBase; //json file for tie up pattern types
@@ -112,8 +110,8 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(800, 600);
-  canvas.parent("main");
+  var canvas = createCanvas(640, 600);
+  canvas.parent("main"); //display canvas centering on html
   //slider for bacground color
   /*colorMode(HSB);
   sliderBackgrnd = createSlider(0, 360, 60, 40);
@@ -146,20 +144,25 @@ function setup() {
 
   //input letters-sentences-words-characters or numbers
   inputTxt = " ";
-
   //input field
-  myInp = createInput("");
-  myInp.position(colsThread * w + bord + colsTieUp * w + bord + 10, 120);
-  myInp.size(92);
+  myInp = createInput("text here");
+  //myInp.position(colsThread * w + bord + colsTieUp * w + bord + 320, 93);
+  // myInp.position(610, colsThread * w + bord + colsTieUp * w + bord * 15);
+  myInp.size(300);
+  myInp.style("color", "#0000ff"); // Text color
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
+
+  myInp.parent("myInpText"); //centering on html
 
   //submit button
   myButton = createButton("send your text");
-  myButton.position(myInp.x, myInp.height + 120);
+  myButton.parent("send");
+  myButton.style("background-color", "#16F60A");
+  //myButton.position(myInp.x, myInp.height + 93);
+  // myButton.position(
+  myInp.x - 100, colsThread * w + bord + colsTieUp * w + bord * 15;
+  // );
   myButton.mousePressed();
-
-  //myText = "";
-  //inputTxt = "";
 
   //-----------------------------------------
   // Thread - top horizontal
@@ -216,6 +219,7 @@ function setup() {
 //type ettiğimiz harfleri inputTxt ye atadım
 function typing() {
   inputTxt = this.value();
+
   if (inputTxt.length > colsThread) {
     let diff = inputTxt.length - colsThread;
     inputTxt = inputTxt.slice(diff);
@@ -243,20 +247,17 @@ function draw() {
   //background(220);
   //slider for background
   //let valBack = sliderBackgrnd.value();
-
-  //shiftThreadVal--;
-  //shiftPedalVal++;
   textAlign(LEFT);
-  textSize(10);
-
-  fill(0);
-  text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
+  textSize(11);
+  fill(255);
+  //text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
   text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
-  text("warp", (colsThread * w) / 2 + bord, 20);
-  text("tie-up", colsThread * w + bord * 3, 20);
-  text("weft", colsThread * w + bord * 3, rowsTieUp * h + bord * 3 + 10);
-  text("draw-down", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 10);
-  text("text something", (colsThread + colsTieUp) * w + bord * 5, 20);
+  fill(0, 255, 0);
+  text("warp", (colsThread * w) / 2 + bord * 2, 10);
+  text("tie-up", colsThread * w + bord * 2 - 2, 10);
+  text("weft", colsThread * w + bord * 2 + 3, rowsTieUp * h + bord * 3 + 5);
+  text("draw-down", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 5);
+  //text("text something", (colsThread + colsTieUp) * w + bord * 5, 20);
   //text(myText, 20, 300);
 
   for (let i = 0; i < colsThread; i++) {
@@ -309,13 +310,8 @@ function getLetters(mx, my) {
               j
             ].setClicked();
           }
-          //
-          // threads[colsThread + currentId - inputTxt.length][j].setClicked();
-          // threads[colsThread + currentId - inputTxt.length * 2][j].setClicked();
         } else {
           threads[currentId][j].setClicked();
-
-          // threads[currentId * inputTxt[i].length][j].setClicked();
         }
       }
     }
@@ -490,6 +486,7 @@ function activeTieUp() {
 function keyPressed() {
   if (key == "0") {
     clearCanvas();
+    clearText();
   }
   if (key == "1") {
     save("yourPattern.jpg");

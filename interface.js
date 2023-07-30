@@ -1,7 +1,14 @@
 function initGUI() {
-  button_clean = createButton("change tie-up");
+  var button_clean = createButton("change tie-up");
   button_clean.mousePressed(button_clean_handler);
-  button_clean.position(colsThread * w + bord + colsTieUp * w + bord + 10, 200);
+  button_clean.parent("change_tie-up");
+  button_clean.style("background-color", "#16F60A");
+  //button_clean.position(
+  colsThread * w + bord + colsTieUp * w + bord + 320, 200;
+  // );
+  //button_clean.position(
+  170, colsThread * w + bord + colsTieUp * w + bord * 3 + 30;
+  // );
 }
 
 //------------------------------------------------------
@@ -38,4 +45,9 @@ function clearCanvas() {
       drawDown[i][j].setUnclicked();
     }
   }
+}
+
+function clearText() {
+  inputTxt = "";
+  myInp.value("");
 }
