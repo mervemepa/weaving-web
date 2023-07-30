@@ -145,17 +145,20 @@ function setup() {
   //input letters-sentences-words-characters or numbers
   inputTxt = " ";
   //input field
-  myInp = createInput("text here");
+  myInp = createInput("Text something right here!");
   //myInp.position(colsThread * w + bord + colsTieUp * w + bord + 320, 93);
   // myInp.position(610, colsThread * w + bord + colsTieUp * w + bord * 15);
   myInp.size(300);
-  myInp.style("color", "#0000ff"); // Text color
+  myInp.style("font-size", "13px");
+  myInp.style("font-family", "system-ui"); // Font family
+
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
 
   myInp.parent("myInpText"); //centering on html
 
   //submit button
   myButton = createButton("send your text");
+  myButton.style("font-family", "system-ui");
   myButton.parent("send");
   myButton.style("background-color", "#16F60A");
   //myButton.position(myInp.x, myInp.height + 93);
@@ -248,11 +251,13 @@ function draw() {
   //slider for background
   //let valBack = sliderBackgrnd.value();
   textAlign(LEFT);
-  textSize(11);
+  textSize(9);
   fill(255);
+
   //text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
   text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
   fill(0, 255, 0);
+  textFont("system-ui");
   text("warp", (colsThread * w) / 2 + bord * 2, 10);
   text("tie-up", colsThread * w + bord * 2 - 2, 10);
   text("weft", colsThread * w + bord * 2 + 3, rowsTieUp * h + bord * 3 + 5);

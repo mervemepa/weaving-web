@@ -3,6 +3,7 @@ function initGUI() {
   button_clean.mousePressed(button_clean_handler);
   button_clean.parent("change_tie-up");
   button_clean.style("background-color", "#16F60A");
+  button_clean.style("font-family", "system-ui");
   //button_clean.position(
   colsThread * w + bord + colsTieUp * w + bord + 320, 200;
   // );
