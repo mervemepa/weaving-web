@@ -151,21 +151,28 @@ function setup() {
   myInp.size(300);
   myInp.style("font-size", "13px");
   myInp.style("font-family", "system-ui"); // Font family
-
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
-
   myInp.parent("myInpText"); //centering on html
 
   //submit button
-  myButton = createButton("send your text");
+  myButton = createButton("weave your text");
   myButton.style("font-family", "system-ui");
   myButton.parent("send");
-  myButton.style("background-color", "#16F60A");
-  //myButton.position(myInp.x, myInp.height + 93);
-  // myButton.position(
-  myInp.x - 100, colsThread * w + bord + colsTieUp * w + bord * 15;
-  // );
+  myButton.style("background-color", "#AAAAAA");
+
   myButton.mousePressed();
+
+  picButton = createButton("save as .jpg");
+  picButton.style("font-family", "system-ui");
+  picButton.parent("send");
+  picButton.style("background-color", "#AAAAAA");
+  picButton.mousePressed();
+
+  cleanButton = createButton("clean");
+  cleanButton.style("font-family", "system-ui");
+  cleanButton.parent("clean");
+  cleanButton.style("background-color", "#AAAAAA");
+  cleanButton.mousePressed();
 
   //-----------------------------------------
   // Thread - top horizontal
@@ -256,7 +263,7 @@ function draw() {
 
   //text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
   text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
-  fill(0, 255, 0);
+  //fill("#FFFFFF");
   textFont("system-ui");
   text("warp", (colsThread * w) / 2 + bord * 2, 10);
   text("tie-up", colsThread * w + bord * 2 - 2, 10);

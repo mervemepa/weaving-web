@@ -54,12 +54,12 @@ class Draft {
   }
 
   show() {
-    strokeWeight(1);
-
+    noStroke();
+    //strokeWeight(0.5);
     //fill(this.cl);
     //rect(this.x, this.y, this.w, this.h);
     fill(this.cl);
-    rect(this.x, this.y, this.w, this.h);
+    rect(this.x, this.y, this.w - 2.5, this.h - 2.5);
     //ellipse(this.x, this.y, this.w, this.h);
     //fill(0);
     //kutuların içindeki rakamları kapattık
