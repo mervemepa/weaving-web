@@ -81,7 +81,7 @@ let h; //each little box height
 let cl; //color of empty boxes
 //-------------------------------------------
 
-let button_clean; //cleans thread, tieUp and pedal parts
+let button_change; //change tieUp model
 
 //-------------------------------------------
 let activeThreadsArr = [];
@@ -104,6 +104,7 @@ let tieUpDataBase; //json file for tie up pattern types
 let tieUp_Data;
 let tieup_Data_src;
 
+//assets
 function preload() {
   settings = loadJSON("assets/settings.json");
   tieup_Data_src = loadJSON("assets/tieUpDataBase.json");
@@ -145,10 +146,10 @@ function setup() {
   //input letters-sentences-words-characters or numbers
   inputTxt = " ";
   //input field
-  myInp = createInput("Text something right here!");
+  myInp = createInput("Text something here!");
   //myInp.position(colsThread * w + bord + colsTieUp * w + bord + 320, 93);
   // myInp.position(610, colsThread * w + bord + colsTieUp * w + bord * 15);
-  myInp.size(300);
+  myInp.size(625);
   myInp.style("font-size", "13px");
   myInp.style("font-family", "system-ui"); // Font family
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
@@ -156,23 +157,11 @@ function setup() {
 
   //submit button
   myButton = createButton("weave your text");
+  myButton.size(150);
   myButton.style("font-family", "system-ui");
   myButton.parent("send");
   myButton.style("background-color", "#AAAAAA");
-
   myButton.mousePressed();
-
-  picButton = createButton("save as .jpg");
-  picButton.style("font-family", "system-ui");
-  picButton.parent("send");
-  picButton.style("background-color", "#AAAAAA");
-  picButton.mousePressed();
-
-  cleanButton = createButton("clean");
-  cleanButton.style("font-family", "system-ui");
-  cleanButton.parent("clean");
-  cleanButton.style("background-color", "#AAAAAA");
-  cleanButton.mousePressed();
 
   //-----------------------------------------
   // Thread - top horizontal
@@ -269,8 +258,6 @@ function draw() {
   text("tie-up", colsThread * w + bord * 2 - 2, 10);
   text("weft", colsThread * w + bord * 2 + 3, rowsTieUp * h + bord * 3 + 5);
   text("draw-down", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 5);
-  //text("text something", (colsThread + colsTieUp) * w + bord * 5, 20);
-  //text(myText, 20, 300);
 
   for (let i = 0; i < colsThread; i++) {
     for (let j = 0; j < rowsThread; j++) {
@@ -495,7 +482,7 @@ function activeTieUp() {
 
 //------------------------------------------------------
 
-function keyPressed() {
+/*function keyPressed() {
   if (key == "0") {
     clearCanvas();
     clearText();
@@ -503,4 +490,4 @@ function keyPressed() {
   if (key == "1") {
     save("yourPattern.jpg");
   }
-}
+}*/

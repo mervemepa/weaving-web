@@ -8,7 +8,7 @@ html, body {
   height: 100vh;
   position: relative;
   top: 0%;
-  left: 5px;
+  left: 0px;
 }
 
 .main-wrapper {
@@ -16,23 +16,31 @@ html, body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 0px;
 }
+
+
 
 #main {
   height: 630px;
-}
-
-#change_tie-up {
-  height: 20px;
 }
 
 #myInpText {
   height: 30px;
 }
 
+.box-wrapper {
+  display: flex;
+  flex-direction: row;
+/*justify-content: space-between;*/
+}
+
 #send {
   height: 30px;
+}
+
+#change_tie-up {
+  height: 20px;
 }
 
 #jpg {
@@ -46,9 +54,6 @@ html, body {
 canvas {
   display: block;
   margin: 20px;
- /* position: absolute;
-  top: 10%;
-  left: 5px;*/
 }
 
 
@@ -65,7 +70,7 @@ canvas {
 }
 
  .info {
-  color:#0000C4;
+  color:#00C400;
   font-size: small;
   font-stretch: 150%;
   letter-spacing: .2rem;
@@ -76,11 +81,12 @@ canvas {
 }
 
  .paragraph {
-  font-size: 14px;
-  letter-spacing: .1.5rem;
+  font-size: 11px;
+  letter-spacing: .1.75rem;
   text-align: justify;
   font-family: system-ui;
-  color:#0000C4;
+  color:#00C400;
+  /*font-variant-caps: all-small-caps;*/
    /* Change color to your preference */
   line-height: 1.5;
   margin: 20px;

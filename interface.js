@@ -1,19 +1,28 @@
 function initGUI() {
-  var button_clean = createButton("change tie-up");
-  button_clean.mousePressed(button_clean_handler);
-  button_clean.parent("change_tie-up");
-  button_clean.style("background-color", "#AAAAAA");
-  button_clean.style("font-family", "system-ui");
-  //button_clean.position(
-  colsThread * w + bord + colsTieUp * w + bord + 320, 200;
-  // );
-  //button_clean.position(
-  170, colsThread * w + bord + colsTieUp * w + bord * 3 + 30;
-  // );
+  var button_change = createButton("change tie-up"); //button for changing tie-up
+  button_change.size(150);
+  button_change.mousePressed(button_change_handler);
+  button_change.parent("change_tie-up");
+  button_change.style("background-color", "#AAAAAA");
+  button_change.style("font-family", "system-ui");
+
+  var cleanButton = createButton("clean"); //button for cleaning canvas and text
+  cleanButton.size(150);
+  cleanButton.style("font-family", "system-ui");
+  cleanButton.parent("clean");
+  cleanButton.style("background-color", "#AAAAAA");
+  cleanButton.mousePressed(cleanFull);
+
+  var picButton = createButton("save as .jpg"); //button for save canvas as .jpg
+  picButton.size(150);
+  picButton.style("font-family", "system-ui");
+  picButton.parent("send");
+  picButton.style("background-color", "#AAAAAA");
+  picButton.mousePressed(saveJpg); //hep bir sonrakini save ediyo
 }
 
 //------------------------------------------------------
-function button_clean_handler() {
+function button_change_handler() {
   clearCanvas();
 }
 
@@ -51,4 +60,13 @@ function clearCanvas() {
 function clearText() {
   inputTxt = "";
   myInp.value("");
+}
+
+function cleanFull() {
+  clearCanvas();
+  clearText();
+}
+
+function saveJpg() {
+  save("yourPattern.jpg");
 }
