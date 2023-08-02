@@ -32,15 +32,16 @@ html, body {
 .box-wrapper {
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 /*justify-content: space-between;*/
 }
 
 #send {
-  height: 30px;
+  height: 10px;
 }
 
 #change_tie-up {
-  height: 20px;
+  height: 10px;
 }
 
 #jpg {
@@ -72,7 +73,7 @@ canvas {
  .info {
   color:#00C400;
   font-size: small;
-  font-stretch: 150%;
+  font-stretch: 110%;
   letter-spacing: .2rem;
   font-family: system-ui;
   /*position: relative;
@@ -81,7 +82,7 @@ canvas {
 }
 
  .paragraph {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: .1.75rem;
   text-align: justify;
   font-family: system-ui;
@@ -89,7 +90,7 @@ canvas {
   /*font-variant-caps: all-small-caps;*/
    /* Change color to your preference */
   line-height: 1.5;
-  margin: 20px;
+  margin: 10px;
   width: 640px;
   /*position: absolute;
   top: 92%;
