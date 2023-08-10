@@ -56,7 +56,8 @@ body {
 }
 
 canvas {
-  display: block;
+  max-width: 100%;
+  display: flex;
   margin: 20px;
 }
 
