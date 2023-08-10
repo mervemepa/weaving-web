@@ -14,7 +14,7 @@ body {
 }
 
 .main-wrapper {
-  max-width: 100%;
+  
 
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ body {
 }
 
 .box-wrapper {
-  max-width: 100%;
+  
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
@@ -62,7 +62,7 @@ canvas {
 }
 
 .title {
-  max-width: 100%;
+  
   color: #00C400;
   font-variant-caps: all-small-caps;
   font-size: 24px;
