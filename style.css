@@ -13,9 +13,12 @@ body {
 
 }
 
-.main-wrapper {
-  
+@media screen and (min-width: 600px) {
 
+  
+}
+
+.main-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -57,7 +60,7 @@ body {
 
 canvas {
   max-width: 100%;
-  display: flex;
+  display: block;
   margin: 20px;
 }
 
