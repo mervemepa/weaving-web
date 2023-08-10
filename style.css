@@ -32,6 +32,7 @@ body {
 }
 
 .box-wrapper {
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
@@ -60,6 +61,7 @@ canvas {
 }
 
 .title {
+  max-width: 100%;
   color: #00C400;
   font-variant-caps: all-small-caps;
   font-size: 24px;
@@ -83,6 +85,7 @@ canvas {
 }
 
 .paragraph {
+  max-width: 100%;
   font-size: 12px;
   letter-spacing: .1.75rem;
   text-align: justify;
