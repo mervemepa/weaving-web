@@ -1,6 +1,4 @@
 
-
-
 html,
 body {
   background-color: #000000;
@@ -16,7 +14,7 @@ body {
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 414px) {
 
 .main-wrapper {
   display: flex;
