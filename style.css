@@ -14,7 +14,7 @@ body {
 }
 
 .main-wrapper {
-  width: 100%;
+  max-width: 100%;
 
   display: flex;
   align-items: center;
@@ -105,12 +105,4 @@ canvas {
 
 .no-optical-sizing {
   font-optical-sizing: none;
-}
-
-@media (max-width: 768px) {
-  /* Styles for smaller screens */
-}
-
-@media (min-width: 769px) {
-  /* Styles for larger screens */
 }
