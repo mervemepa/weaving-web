@@ -15,6 +15,7 @@ body {
 }
 
 @media screen and (max-width: 414px) {
+}
 
 .main-wrapper {
   display: flex;
@@ -110,5 +111,4 @@ canvas {
 
 .no-optical-sizing {
   font-optical-sizing: none;
-}
 }
