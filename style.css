@@ -16,7 +16,7 @@ body {
 @media screen and (min-width: 600px) {
 
   
-}
+
 
 .main-wrapper {
   display: flex;
@@ -112,4 +112,5 @@ canvas {
 
 .no-optical-sizing {
   font-optical-sizing: none;
+}
 }
