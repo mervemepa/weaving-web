@@ -84,7 +84,7 @@ canvas {
   left: 5px;*/
 }
 
-.paragraph {
+.paragraph_0 {
   /*max-width: 100%;*/
   font-size: 12px;
   letter-spacing: .1.75rem;
@@ -95,6 +95,23 @@ canvas {
   /* Change color to your preference */
   line-height: 1.5;
   margin: 10px;
+  width: 640px;
+  /*position: absolute;
+  top: 92%;
+  left: 10px;*/
+}
+
+.paragraph_1 {
+  /*max-width: 100%;*/
+  font-size: 12px;
+  letter-spacing: .1.75rem;
+  text-align: justify;
+  font-family: system-ui;
+  color: #00C400;
+  /*font-variant-caps: all-small-caps;*/
+  /* Change color to your preference */
+  line-height: 1.5;
+  margin: 0px;
   width: 640px;
   /*position: absolute;
   top: 92%;
