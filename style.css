@@ -23,7 +23,7 @@ body {
 
 
 #main {
-  height: 630px;
+  /*height: 630px;*/
 }
 
 #myInpText {
@@ -97,7 +97,7 @@ canvas {
   /* Change color to your preference */
   line-height: 1.5;
   margin: 10px;
-  width: 640px;
+  max-width: 640px;
   /*position: absolute;
   top: 92%;
   left: 10px;*/

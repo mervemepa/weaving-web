@@ -1,20 +1,20 @@
 function initGUI() {
   var button_change = createButton("change tie-up"); //button for changing tie-up
-  button_change.size(150);
+  button_change.size(canvasWidth / 4, buttonHeight);
   button_change.mousePressed(button_change_handler);
   button_change.parent("change_tie-up");
   button_change.style("background-color", "#AAAAAA");
   button_change.style("font-family", "system-ui");
 
   var cleanButton = createButton("clean"); //button for cleaning canvas and text
-  cleanButton.size(150);
+  cleanButton.size(canvasWidth / 4, buttonHeight);
   cleanButton.style("font-family", "system-ui");
   cleanButton.parent("clean");
   cleanButton.style("background-color", "#AAAAAA");
   cleanButton.mousePressed(cleanFull);
 
   var picButton = createButton("save as .jpg"); //button for save canvas as .jpg
-  picButton.size(150);
+  picButton.size(canvasWidth / 4, buttonHeight);
   picButton.style("font-family", "system-ui");
   picButton.parent("jpg");
   picButton.style("background-color", "#AAAAAA");
@@ -22,7 +22,7 @@ function initGUI() {
 
   //submit button
   var myButton = createButton("weave your text");
-  myButton.size(150);
+  myButton.size(canvasWidth / 4, buttonHeight);
   myButton.style("font-family", "system-ui");
   myButton.parent("send");
   myButton.style("background-color", "#AAAAAA");
