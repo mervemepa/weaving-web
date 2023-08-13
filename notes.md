@@ -1,5 +1,5 @@
 - Add more tie-up modules -done
 - Add button for clean display -done
 - Add button for save as jpg -done
-- Edit project text on html file
+- Edit project text on html file - done
 - Prepare a readme file for git

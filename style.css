@@ -128,3 +128,10 @@ canvas {
 .no-optical-sizing {
   font-optical-sizing: none;
 }
+
+ .custom-link {
+   color: #00C400;
+   /* Change this to your desired color */
+   text-decoration: none;
+   /* Remove underline from the link */
+ }
