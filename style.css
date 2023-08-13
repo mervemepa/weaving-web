@@ -79,6 +79,8 @@ canvas {
   font-stretch: 110%;
   letter-spacing: .2rem;
   font-family: system-ui;
+  width: 100%;
+  text-align: center;
   /*position: relative;
   top: 5%;
   left: 5px;*/

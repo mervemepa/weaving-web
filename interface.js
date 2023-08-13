@@ -16,9 +16,17 @@ function initGUI() {
   var picButton = createButton("save as .jpg"); //button for save canvas as .jpg
   picButton.size(150);
   picButton.style("font-family", "system-ui");
-  picButton.parent("send");
+  picButton.parent("jpg");
   picButton.style("background-color", "#AAAAAA");
   picButton.mousePressed(saveJpg); //hep bir sonrakini save ediyo
+
+  //submit button
+  var myButton = createButton("weave your text");
+  myButton.size(150);
+  myButton.style("font-family", "system-ui");
+  myButton.parent("send");
+  myButton.style("background-color", "#AAAAAA");
+  myButton.mousePressed();
 }
 
 //------------------------------------------------------

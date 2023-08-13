@@ -96,7 +96,7 @@ let shiftPedalVal = 0;
 let x = 0;
 let y = 0;
 //--------------------------------------------
-var myButton; //button for entering text
+//var myButton; //button for entering text
 var myInp; //text input inside bar
 //let sliderBackgrnd;
 //--------------------------------------------
@@ -154,14 +154,6 @@ function setup() {
   myInp.style("font-family", "system-ui"); // Font family
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
   myInp.parent("myInpText"); //centering on html
-
-  //submit button
-  myButton = createButton("weave your text");
-  myButton.size(150);
-  myButton.style("font-family", "system-ui");
-  myButton.parent("send");
-  myButton.style("background-color", "#AAAAAA");
-  myButton.mousePressed();
 
   //-----------------------------------------
   // Thread - top horizontal
