@@ -7,6 +7,7 @@ class drawBack_Item {
     this.w = w;
     this.h = h;
     this.cl = cl;
+    //this.letter = letter;
     this.passiveColor = "#ffffff";
     this.activeColor = "#000000";
     //this.passiveColor = "#000000";
@@ -42,7 +43,7 @@ class drawBack_Item {
     rect(this.x, this.y, this.w - 2.5, this.h - 2.5);
     //fill(0);
     //kutuların içindeki rakamları kapattık
-    /* textSize(7);
-    text(this.char, this.x + this.w * 0.5, this.y + this.h * 0.5);*/
+    //textSize(7);
+    //text(this.char, this.x + this.w * 0.5, this.y + this.h * 0.5);
   }
 }

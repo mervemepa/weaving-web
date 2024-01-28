@@ -120,7 +120,7 @@ let tieUpDataBase; //json file for tie up pattern types
 let tieUp_Data;
 let tieup_Data_src;
 
-const canvasWidth = mobileCheck() ? 355 : 640;
+const canvasWidth = mobileCheck() ? 355 : 1280;
 const canvasHeight = mobileCheck() ? 333 : 600;
 const buttonHeight = mobileCheck() ? 40 : 20;
 
@@ -128,6 +128,7 @@ const buttonHeight = mobileCheck() ? 40 : 20;
 function preload() {
   settings = loadJSON("assets/settings.json");
   tieup_Data_src = loadJSON("assets/tieUpDataBase.json");
+  words = loadJSON("assets/words.json");
 }
 
 function setup() {
@@ -135,6 +136,7 @@ function setup() {
   settings.colsThread = mobileCheck() ? 53 : settings.colsThread;
 
   canvas.parent("main"); //display canvas centering on html
+
   //slider for bacground color
   /*colorMode(HSB);
   sliderBackgrnd = createSlider(0, 360, 60, 40);
@@ -185,7 +187,7 @@ function setup() {
       let x = i * w + bord;
 
       let y = j * h + bord * 3;
-
+      //threads[i][j] = new Draft(x, y, w, h, cl, "");
       threads[i][j] = new Draft(x, y, w, h, cl, "");
       threads[i][j].debugEnabled = debugMode;
     }
@@ -194,7 +196,7 @@ function setup() {
   for (let i = 0; i < colsTieUp; i++) {
     tieUp[i] = [];
     for (let j = 0; j < rowsTieUp; j++) {
-      let x = colsThread * w + bord + i * w + bord;
+      let x = colsThread * w + w + i * w + bord;
       let y = j * h + bord * 3;
 
       tieUp[i][j] = new Draft(x, y, w, h, cl, j);
@@ -209,6 +211,7 @@ function setup() {
       let x = colsThread * w + w + i * w + bord;
       let y = rowsThread * h + h + j * h + bord * 4;
 
+      //pedals[i][j] = new Draft(x, y, w, h, cl, i);
       pedals[i][j] = new Draft(x, y, w, h, cl, i);
       pedals[i][j].debugEnabled = debugMode;
     }
@@ -258,8 +261,6 @@ function tieUp_generator() {
 function draw() {
   //background(settings.background);
   //background(220);
-  //slider for background
-  //let valBack = sliderBackgrnd.value();
   textAlign(LEFT);
   textSize(9);
   fill(255);
@@ -299,6 +300,14 @@ function draw() {
 }
 
 //-----------------------------------------------------
+
+function random_word_handler() {
+  const rand = random(words.randomWords);
+  inputTxt = rand;
+  myInp.value(rand);
+  tieUp_generator();
+  getLetters(mouseX, mouseY);
+}
 
 function mousePressed() {
   tieUp_generator();
