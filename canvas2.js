@@ -3,7 +3,7 @@
 //sketch two
 // Sketch two
 //p5.disableFriendlyErrors = true;
-var z2 = function (m) {
+var n = function (m) {
   var letters = [
     "a",
     "b",
@@ -51,10 +51,10 @@ var z2 = function (m) {
   //let myText; //interactive text
 
   m.setup = function () {
-    // m.createCanvas(1200, 100);
-    var canvas_motion = m.createCanvas(1000, 200);
-    canvas_motion.parent("c2");
-
+    // m.createCanvas(canvasWidth, 100);
+    // var canvas2 = m.createCanvas(canvasWidth, 100);
+    //canvas2.parent("main");
+    m.createCanvas(1200, 100);
     // Init draft items
     for (let i = 0; i < maxThreadLen; i++) {
       threadI[i] = [];
@@ -72,7 +72,7 @@ var z2 = function (m) {
     myInp2 = m.createInput("");
     myInp2.position(10, 600 - 32);
     myInp2.size(1200 - 33);
-    myInp2.input(typing); //typing fonksiyonu tanımladım aşağıda
+    myInp2.input(typingMotion); //typing fonksiyonu tanımladım aşağıda
 
     //submit button
     /*myButton = createButton("submit");
@@ -87,7 +87,7 @@ var z2 = function (m) {
   };
 
   //type ettiğimiz harfleri inputTxt ye atadım
-  m.typing = function () {
+  m.typingMotion = function () {
     inputTxt2 = this.value();
     if (inputTxt2.length > maxThreadLen) {
       let diff = inputTxt2.length - maxThreadLen;
@@ -100,10 +100,9 @@ var z2 = function (m) {
 
   m.draw = function () {
     m.background(20);
-
-    m.textAlign(LEFT);
+    m.textAlign(CENTER, CENTER);
     m.textSize(20);
-    m.text("real time input: " + myInp2.value(), 20, 600 - 10);
+    m.text("real time input: " + myInp2.value(), 20, height - 10);
     //text(myText, 20, 300);
 
     //harflerin yerlerini modüloya göre hesapıyoruz
@@ -160,4 +159,4 @@ var z2 = function (m) {
     }
   };
 };
-var myp5 = new p5(z2, "c2");
+var myp5 = new p5(n, "canvas2");

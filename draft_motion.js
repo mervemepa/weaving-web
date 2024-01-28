@@ -9,11 +9,10 @@ class Draft2 {
     this.char2 = char2;
 
     this.state2 = 0; //colorı control için yazdık
-
-    // textAlign(CENTER, CENTER);
+    //textAlign(CENTER, CENTER);
   }
 
-  /*isClicked(px2, py2) {
+  isMotionClicked(px2, py2) {
     if (
       px2 > this.x2 &&
       px2 < this.x2 + this.w2 &&
@@ -24,46 +23,47 @@ class Draft2 {
     } else {
       return false;
     }
-  }*/
+  }
 
   setMotionClicked() {
     this.state2 = 1;
     this.activeColor2 = this.cl2;
   }
 
-  /*getIsClicked() {
+  getMotionIsClicked() {
     return this.state2;
-  }*/
+  }
 
   setMotionUnclicked() {
     this.state2 = 0;
     this.activeColor2 = 255;
   }
 
-  /*clicked(px, py) {  //sketch 4 te kapattık
-      let d = dist(px, py, this.x, this.y); 
-      if (d < this.w && d < this.h) {
-        this.cl = 255;
-      } else {
-        this.cl = 0;
-    } 
-  } */
+  motionClicked(px, py) {
+    //sketch 4 te kapattık
+    let d = dist(px, py, this.x, this.y);
+    if (d < this.w && d < this.h) {
+      this.cl = 255;
+    } else {
+      this.cl = 0;
+    }
+  }
 
   /*changeColor(bright) {
     this.cl = bright;
    } 
-  
-  
-  /*contains(px,py) {
-      let d = dist(px, py, this.x, this.y); 
-      if (d < this.w && d < this.h) {
-        //this.cl = 255;
-        return true;
-      } else {
-        //this.cl = 0;
-        return false;
-      }
-    }*/
+  */
+
+  motionContains(px, py) {
+    let d = dist(px, py, this.x, this.y);
+    if (d < this.w && d < this.h) {
+      //this.cl = 255;
+      return true;
+    } else {
+      //this.cl = 0;
+      return false;
+    }
+  }
 
   showMotion() {
     strokeWeight(2);

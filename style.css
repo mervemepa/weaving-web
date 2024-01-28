@@ -23,18 +23,20 @@ body {
 }
 
 
-#c1 {
-  /*height: 630px;*/
+
+
+
+#main {
+
+ 
 }
 
-#c2 {
-  /*height: 630px;*/
-}
+
 
 #myInpText {
+
   height: 30px;
 }
-
 
 
 .box-wrapper {
@@ -65,8 +67,26 @@ body {
   height: 10px;
 }
 
+.canvas2-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+}
+
+#canvas2 {
+  position: 1000px;
+}
+
 canvas {
  
+  display: block;
+
+  margin: 20px;
+}
+
+canvas2 {
+
   display: block;
 
   margin: 20px;
