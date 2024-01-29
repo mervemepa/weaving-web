@@ -305,6 +305,7 @@ function random_word_handler() {
   const rand = random(words.randomWords);
   inputTxt = rand;
   myInp.value(rand);
+  clearCanvas();
   tieUp_generator();
   getLetters(mouseX, mouseY);
 }

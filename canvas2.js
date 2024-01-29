@@ -3,58 +3,63 @@
 //sketch two
 // Sketch two
 //p5.disableFriendlyErrors = true;
+
+var letters = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  ",",
+  ".",
+];
+
+let threadI = []; //thread column array
+let rowsThread2 = 5; //thread rows number
+let maxThreadLen = 50; //max thread column number
+let margin = 15; //width and height value of one square
+let shiftThreadVal2 = 0;
+let x2 = 0;
+
+let shiftDeltaTime = 1000; //in miliseconds 1 sn
+let currentTime = 0;
+
+let inputTxt2;
+let myButton;
+let myInp2; //text input inside bar
+//let myText; //interactive text
+let width = 750;
+let height = 150;
+
 var n = function (m) {
-  var letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-    ",",
-    ".",
-  ];
-
-  let threadI = []; //thread column array
-  let rowsThread2 = 5; //thread rows number
-  let maxThreadLen = 50; //max thread column number
-  let margin = 15; //width and height value of one square
-  let shiftThreadVal2 = 0;
-  let x2 = 0;
-
-  let shiftDeltaTime = 1000; //in miliseconds 1 sn
-  let currentTime = 0;
-
-  let inputTxt2;
-  let myButton;
-  let myInp2; //text input inside bar
-  //let myText; //interactive text
-
   m.setup = function () {
     // m.createCanvas(canvasWidth, 100);
     // var canvas2 = m.createCanvas(canvasWidth, 100);
     //canvas2.parent("main");
-    m.createCanvas(1200, 100);
+    m.createCanvas(width, height);
+    canvas2 = m.createCanvas(width, height);
+    canvas2.parent("c2");
     // Init draft items
     for (let i = 0; i < maxThreadLen; i++) {
       threadI[i] = [];
@@ -64,15 +69,15 @@ var n = function (m) {
         let y2 = j * margin + 10;
         let w2 = 20;
         let h2 = 20;
-        threadI[i][j] = new Draft2(x2, y2, w2, h2, "#000000", "");
+        threadI[i][j] = new draft_motion(x2, y2, w2, h2, "#000000", "");
       }
     }
 
     //input field
     myInp2 = m.createInput("");
-    myInp2.position(10, 600 - 32);
+    myInp2.position(10, 1200 - 32);
     myInp2.size(1200 - 33);
-    myInp2.input(typingMotion); //typing fonksiyonu tanımladım aşağıda
+    myInp2.input(m.typingMotion); //typing fonksiyonu tanımladım aşağıda
 
     //submit button
     /*myButton = createButton("submit");
@@ -100,9 +105,9 @@ var n = function (m) {
 
   m.draw = function () {
     m.background(20);
-    m.textAlign(CENTER, CENTER);
+    //m.textAlign(m.CENTER, m.CENTER);
     m.textSize(20);
-    m.text("real time input: " + myInp2.value(), 20, height - 10);
+    m.text("real time input: " + myInp2.value(), 20, 600 - 10);
     //text(myText, 20, 300);
 
     //harflerin yerlerini modüloya göre hesapıyoruz
@@ -159,4 +164,4 @@ var n = function (m) {
     }
   };
 };
-var myp5 = new p5(n, "canvas2");
+var myp5 = new p5(n, "c2");

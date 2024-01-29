@@ -1,4 +1,4 @@
-class Draft2 {
+class draft_motion {
   constructor(x2, y2, w2, h2, cl2, char2 = "0") {
     this.x2 = x2;
     this.y2 = y2;
@@ -39,7 +39,7 @@ class Draft2 {
     this.activeColor2 = 255;
   }
 
-  motionClicked(px, py) {
+  /*motionClicked(px, py) {
     //sketch 4 te kapattık
     let d = dist(px, py, this.x, this.y);
     if (d < this.w && d < this.h) {
@@ -47,14 +47,14 @@ class Draft2 {
     } else {
       this.cl = 0;
     }
-  }
+  }*/
 
   /*changeColor(bright) {
     this.cl = bright;
    } 
   */
 
-  motionContains(px, py) {
+  /*motionContains(px, py) {
     let d = dist(px, py, this.x, this.y);
     if (d < this.w && d < this.h) {
       //this.cl = 255;
@@ -63,7 +63,7 @@ class Draft2 {
       //this.cl = 0;
       return false;
     }
-  }
+  }*/
 
   showMotion() {
     strokeWeight(2);

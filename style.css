@@ -32,7 +32,7 @@ body {
 }
 
 
-
+#c2 {}
 #myInpText {
 
   height: 30px;
@@ -67,16 +67,9 @@ body {
   height: 10px;
 }
 
-.canvas2-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0px;
-}
 
-#canvas2 {
-  position: 1000px;
-}
+
+
 
 canvas {
  
@@ -85,12 +78,6 @@ canvas {
   margin: 20px;
 }
 
-canvas2 {
-
-  display: block;
-
-  margin: 20px;
-}
 
 
 .title {

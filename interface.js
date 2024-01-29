@@ -29,6 +29,7 @@ function initGUI() {
 
   var randomButton = createButton("random Words"); //submit button
   randomButton.size(canvasWidth / 5, buttonHeight);
+
   randomButton.style("font-family", "system-ui");
   randomButton.parent("randombutton");
   randomButton.style("background-color", "#AAAAAA");
