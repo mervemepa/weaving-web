@@ -245,6 +245,7 @@ function typing() {
   //console.log("you are typing: ", this.value());
 }
 //------------------------------------------------------
+//random tie_up pattern generator
 function tieUp_generator() {
   k = floor(random(0, tieUp_Data.length));
   for (let i = 0; i < tieUp_Data[k].length; i++) {
@@ -301,6 +302,7 @@ function draw() {
 
 //-----------------------------------------------------
 
+//random words button generator
 function random_word_handler() {
   const rand = random(words.randomWords);
   inputTxt = rand;
@@ -328,8 +330,9 @@ function getLetters(mx, my) {
         if (currentId < 0) {
           threads[colsThread + currentId][j].setClicked();
           let repNum = floor(colsThread / inputTxt.length); //pattern repetition number
+          let dif = colsThread - repNum * inputTxt.length;
           for (let k = 0; k < repNum; k++) {
-            threads[colsThread + currentId - inputTxt.length * k][
+            threads[colsThread + currentId - inputTxt.length * k - dif][
               j
             ].setClicked();
           }
@@ -355,6 +358,7 @@ function getLetters(mx, my) {
           // pedals[_i][currentId].setClicked();
           //pedals[_i][currentId + inputTxt.length].setClicked();
           let _repNum = floor(colsThread / inputTxt.length);
+          let _dif = colsThread - _repNum * inputTxt.length;
           for (let _k = 0; _k < _repNum; _k++) {
             pedals[_i][currentId + inputTxt.length * _k].setClicked();
           }
