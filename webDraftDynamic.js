@@ -174,7 +174,7 @@ function setup() {
   //myInp.position(colsThread * w + bord + colsTieUp * w + bord + 320, 93);
   // myInp.position(610, colsThread * w + bord + colsTieUp * w + bord * 15);
   myInp.size(canvasWidth);
-  myInp.style("font-size", "13px");
+  myInp.style("font-size", "14px");
   myInp.style("font-family", "system-ui"); // Font family
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
   myInp.parent("myInpText"); //centering on html
@@ -263,17 +263,17 @@ function draw() {
   //background(settings.background);
   //background(220);
   textAlign(LEFT);
-  textSize(9);
-  fill(255);
+  textSize(12);
+  fill(50);
 
   //text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
   text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
   //fill("#FFFFFF");
   textFont("system-ui");
-  text("warp", (colsThread * w) / 2 + bord * 2, 10);
-  text("tie-up", colsThread * w + bord * 2 - 2, 10);
-  text("weft", colsThread * w + bord * 2 + 3, rowsTieUp * h + bord * 3 + 5);
-  text("draw-down", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 5);
+  text("shafts", (colsThread * w) / 2 + bord * 2 + 10, 10);
+  text("tie-up", colsThread * w + bord * 2 + 10, 10);
+  text("pedals", colsThread * w + bord * 2 + 10, rowsTieUp * h + bord * 3 + 7);
+  text("weaving draft", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 7);
 
   for (let i = 0; i < colsThread; i++) {
     for (let j = 0; j < rowsThread; j++) {

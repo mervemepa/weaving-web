@@ -192,6 +192,8 @@ canvas {
      }
 
       h3 {
+        font-size: 14px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
          color: #333;
         }
             
