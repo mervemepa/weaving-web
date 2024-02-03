@@ -121,7 +121,7 @@ let tieUp_Data;
 let tieup_Data_src;
 
 const canvasWidth = mobileCheck() ? 355 : 1280;
-const canvasHeight = mobileCheck() ? 333 : 600;
+const canvasHeight = mobileCheck() ? 333 : 800;
 const buttonHeight = mobileCheck() ? 40 : 20;
 
 //assets

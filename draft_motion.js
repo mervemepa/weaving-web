@@ -66,11 +66,12 @@ class draft_motion {
   }*/
 
   showMotion() {
-    strokeWeight(2);
+    //noStroke();
+    //strokeWeight(2);
     fill(this.activeColor2);
     //rect(this.x, this.y, this.w, this.h);
     rect(this.x2, this.y2, this.w2, this.h2);
-    fill(0);
+    // fill(0);
 
     textSize(7);
     text(this.char2, this.x2 + this.w2 * 0.5, this.y2 + this.h2 * 0.5);

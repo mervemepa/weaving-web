@@ -3,13 +3,13 @@
     "rowsTieUp" : 5,
    
    
-    "colsThread" :100,
+    "colsThread" :120,
     "rowsThread" :5,
     "box_Size" :5,
     "debug" : 0,
    "background": "#ffffff",
-    "w" : 12,  
-    "h" : 12,
+    "w" : 10,  
+    "h" : 10,
     "bord" : 5, 
     "cl" : 255,
     "shiftThreadVal"  : 0,

@@ -517,7 +517,7 @@ var myp5 = new p5(z, "c1");
 // Sketch two
 //p5.disableFriendlyErrors = true;
 var n = function (m) {
-  var letters = [
+  var lettersA = [
     "a",
     "b",
     "c",
@@ -548,7 +548,7 @@ var n = function (m) {
     ".",
   ];
 
-  let threadI = []; //thread column array
+  let threadIA = []; //thread column array
   let rowsThread2 = 5; //thread rows number
   let maxThreadLen = 50; //max thread column number
   let margin = 15; //width and height value of one square
@@ -574,14 +574,14 @@ var n = function (m) {
     canvas2.parent("c2");
     // Init draft items
     for (let i = 0; i < maxThreadLen; i++) {
-      threadI[i] = [];
+      threadIA[i] = [];
 
       for (let j = 0; j < rowsThread2; j++) {
         let x2 = i * margin + 10;
         let y2 = j * margin + 10;
         let w2 = 20;
         let h2 = 20;
-        threadI[i][j] = new draft_motion(x2, y2, w2, h2, "#000000", "");
+        threadIA[i][j] = new draft_motion(x2, y2, w2, h2, "#000000", "");
       }
     }
 
@@ -625,7 +625,7 @@ var n = function (m) {
     //harflerin yerlerini modüloya göre hesapıyoruz
     for (let i = 0; i < maxThreadLen; i++) {
       let letter2 = inputTxt2[i];
-      let letterIndex2 = letters.indexOf(letter2) % 5;
+      let letterIndex2 = lettersA.indexOf(letter2) % 5;
 
       for (let j = 0; j < rowsThread2; j++) {
         //Elemanlar sağ taraftan gelmesi için
@@ -639,14 +639,14 @@ var n = function (m) {
           // maxThreadLen'den çıkart
           if (currentId2 < 0) {
             // currentId negatif değer olduğu için toplama işareti kullandık
-            threadI[maxThreadLen + currentId2][j].setMotionClicked();
+            threadIA[maxThreadLen + currentId2][j].setMotionClicked();
           } else {
-            threadI[currentId2][j].setMotionClicked();
+            threadIA[currentId2][j].setMotionClicked();
             // Eğer shiftThreadVal negatif değilse;
           }
         }
 
-        threadI[i][j].showMotion();
+        threadIA[i][j].showMotion();
       }
     }
 
@@ -664,7 +664,7 @@ var n = function (m) {
   m.clearAllThreads = function () {
     for (let i = 0; i < maxThreadLen; i++) {
       for (let j = 0; j < rowsThread2; j++) {
-        threadI[i][j].setMotionUnclicked();
+        threadIA[i][j].setMotionUnclicked();
       }
     }
   };
