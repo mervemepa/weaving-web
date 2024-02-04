@@ -3,36 +3,36 @@ function initGUI() {
   button_change.size(canvasWidth / 5, buttonHeight);
   button_change.mousePressed(button_change_handler);
   button_change.parent("change_tie-up");
-  button_change.style("background-color", "#AAAAAA");
+  button_change.style("background-color", "#808080");
   button_change.style("font-family", "system-ui");
 
-  var cleanButton = createButton("clean"); //button for cleaning canvas and text
+  var cleanButton = createButton("clean text"); //button for cleaning canvas and text
   cleanButton.size(canvasWidth / 5, buttonHeight);
   cleanButton.style("font-family", "system-ui");
   cleanButton.parent("clean");
-  cleanButton.style("background-color", "#AAAAAA");
+  cleanButton.style("background-color", "#808080");
   cleanButton.mousePressed(cleanFull);
 
   var picButton = createButton("save as .jpg"); //button for save canvas as .jpg
   picButton.size(canvasWidth / 5, buttonHeight);
   picButton.style("font-family", "system-ui");
   picButton.parent("jpg");
-  picButton.style("background-color", "#AAAAAA");
+  picButton.style("background-color", "#808080");
   picButton.mousePressed(saveJpg); //hep bir sonrakini save ediyo
 
   var myButton = createButton("weave your text"); //submit button
   myButton.size(canvasWidth / 5, buttonHeight);
   myButton.style("font-family", "system-ui");
   myButton.parent("send");
-  myButton.style("background-color", "#AAAAAA");
+  myButton.style("background-color", "#808080");
   //myButton.mousePressed();
 
-  var randomButton = createButton("random Words"); //submit button
+  var randomButton = createButton("word index"); //submit button
   randomButton.size(canvasWidth / 5, buttonHeight);
-
   randomButton.style("font-family", "system-ui");
   randomButton.parent("randombutton");
-  randomButton.style("background-color", "#AAAAAA");
+  randomButton.style("background-color", "#0000ff");
+  randomButton.style("color", "#b4b2b2");
   randomButton.mousePressed(random_word_handler);
 }
 
