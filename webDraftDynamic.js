@@ -120,7 +120,7 @@ let tieUpDataBase; //json file for tie up pattern types
 let tieUp_Data;
 let tieup_Data_src;
 
-const canvasWidth = mobileCheck() ? 355 : 1280;
+const canvasWidth = mobileCheck() ? 355 : 640;
 const canvasHeight = mobileCheck() ? 333 : 800;
 const buttonHeight = mobileCheck() ? 40 : 20;
 
