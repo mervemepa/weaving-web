@@ -31,8 +31,8 @@ function initGUI() {
   randomButton.size(canvasWidth / 5, buttonHeight);
   randomButton.style("font-family", "system-ui");
   randomButton.parent("randombutton");
-  randomButton.style("background-color", "#0000ff");
-  randomButton.style("color", "#b4b2b2");
+  randomButton.style("background-color", "#808080");
+  //randomButton.style("color", "#b4b2b2");
   randomButton.mousePressed(random_word_handler);
 }
 
