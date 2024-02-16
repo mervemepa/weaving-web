@@ -1,19 +1,16 @@
 {
-    "colsTieUp" : 5,
-    "rowsTieUp" : 5,
-   
-   
-    "colsThread" :85,
-    "rowsThread" :5,
-    "box_Size" :7,
-    "debug" : 0,
-   "background": "#ffffff",
-    "w" : 7,  
-    "h" : 7,
-    "bord" : 5, 
-    "cl" : 255,
-    "shiftThreadVal"  : 0,
-    "animate" : 1
+  "colsTieUp": 5,
+  "rowsTieUp": 5,
 
+  "colsThread": 100,
+  "rowsThread": 5,
+  "box_Size": 6,
+  "debug": 0,
+  "background": "#ffffff",
+  "w": 6,
+  "h": 6,
+  "bord": 2,
+  "cl": 255,
+  "shiftThreadVal": 0,
+  "animate": 1
 }
-
