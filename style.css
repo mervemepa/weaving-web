@@ -150,8 +150,8 @@ canvas {
   color: #020202;
   /*font-variant-caps: all-small-caps;*/
   line-height: 1.5;
-  margin-bottom: 10px;
-  margin-top: 40px;
+  margin-bottom: 0px;
+  margin-top: 50px;
   max-width: 800px; 
   /*position: absolute;
   top: 92%;
@@ -357,6 +357,25 @@ canvas {
             width: 250px;
            height: 1px;
        }
+
+       .weaving-container {
+    display: flex;
+    }
+
+ 
+
+    .weaving-container img {
+          width: auto;
+          /* Adjust the width as needed */
+          height: 250px;
+          /* Adjust the height as needed */
+            margin-right: 20px;
+            margin-top: 25px;
+        }
+        .weaving-container figcaption {
+      margin-top: 5px; /* Açıklamadan görsel arasındaki boşluğu ayarlayın */
+    }
+
   figcaption {
     font-size: 12px;
         margin-top: 10px;

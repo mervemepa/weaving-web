@@ -268,7 +268,7 @@ function draw() {
   fill(50);
 
   //text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
-  text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
+  //text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
   //fill("#FFFFFF");
   textFont("system-ui");
   text("shafts", (colsThread * w) / 2 + bord * 2 + 10, 10);

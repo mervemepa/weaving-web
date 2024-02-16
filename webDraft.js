@@ -239,7 +239,7 @@ function draw() {
   text("tie-up", colsThread * w + bord * 3, 20);
   text("weft", colsThread * w + bord * 3, rowsTieUp * h + bord * 3 + 10);
   text("draw-down", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 10);
-  text("text something", (colsThread + colsTieUp) * w + bord * 5, 20);
+  //text("text something", (colsThread + colsTieUp) * w + bord * 5, 20);
   //text(myText, 20, 300);
 
   for (let i = 0; i < colsThread; i++) {
