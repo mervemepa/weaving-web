@@ -165,7 +165,7 @@ function setup() {
   // myInp.position(610, colsThread * w + bord + colsTieUp * w + bord * 15);
   myInp.size(canvasWidth);
   myInp.style("border", "none");
-  myInp.style("font-size", "14px");
+  myInp.style("font-size", "12px");
   myInp.style("font-family", "system-ui"); // Font family
   myInp.input(typing); //typing fonksiyonu tanımladım aşağıda
   myInp.parent("myInpText"); //centering on html
