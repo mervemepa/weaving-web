@@ -254,14 +254,14 @@ function draw() {
   //background(settings.background);
   //background(220);
   textAlign(LEFT);
-  textSize(12);
+  textSize(8);
   fill(50);
 
   textFont("system-ui");
-  text("shafts", (colsThread * w) / 2 + bord * 2 + 10, 10);
-  text("tie-up", colsThread * w + bord * 2 + 10, 10);
-  text("pedals", colsThread * w + bord * 2 + 10, rowsTieUp * h + bord * 3 + 7);
-  text("weaving draft", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 7);
+  text("shafts", (colsThread * w) / 2 + bord * 2 + 1, 2);
+  text("tie-up", colsThread * w + bord * 2 + 5, 2);
+  text("pedals", colsThread * w + bord * 2 + 5, rowsTieUp * h + bord * 3 + 3);
+  text("text draft", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 3);
 
   for (let i = 0; i < colsThread; i++) {
     for (let j = 0; j < rowsThread; j++) {
