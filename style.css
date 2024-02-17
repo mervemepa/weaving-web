@@ -107,7 +107,7 @@ canvas {
 
 .apostrof:hover {
   color: blue;
-  /* Cursor metnin üzerine geldiğinde mavi renge dönüştür */
+  /* Changes to blue colour when cursor hovers over text */
 }
 
 .cite {
@@ -232,7 +232,8 @@ th {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
+ 
 }
 
 .ethno {
@@ -241,9 +242,9 @@ th {
   display: block;
 }
 
+
 .arrow_right {
   position: absolute;
-
   transform: translate(-50%, -50%);
   width: 150px;
   height: 2px;
@@ -340,13 +341,11 @@ th {
 .weaving-container img {
   width: 100%;
   max-width: 100%;
-  /* Adjust the width as needed */
-  /* Adjust the height as needed */
   margin-right: 20px;
   margin-top: 25px;
 }
 .weaving-container figcaption {
-  margin-top: 5px; /* Açıklamadan görsel arasındaki boşluğu ayarlayın */
+  margin-top: 5px; 
 }
 
 figcaption {

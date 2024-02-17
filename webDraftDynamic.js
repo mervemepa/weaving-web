@@ -137,13 +137,6 @@ function setup() {
 
   canvas.parent("main"); //display canvas centering on html
 
-  //slider for bacground color
-  /*colorMode(HSB);
-  sliderBackgrnd = createSlider(0, 360, 60, 40);
-  sliderBackgrnd.position(10, 10);
-  sliderBackgrnd.style("width", "80px");
-  */
-
   colsTieUp = settings.colsTieUp;
   rowsTieUp = settings.rowsTieUp;
 
@@ -154,9 +147,6 @@ function setup() {
   h = settings.h;
   cl = settings.cl;
   tieUp_Data = tieup_Data_src.tieUp;
-
-  //space = settings.space;
-  //margin = settings.margin;
 
   bord = settings.bord;
   debugMode = settings.debug;
@@ -267,9 +257,6 @@ function draw() {
   textSize(12);
   fill(50);
 
-  //text("Real-time: ", bord, rowsThread * h + colsThread * h + 70);
-  //text(myInp.value(), bord, rowsThread * h + colsThread * h + 80);
-  //fill("#FFFFFF");
   textFont("system-ui");
   text("shafts", (colsThread * w) / 2 + bord * 2 + 10, 10);
   text("tie-up", colsThread * w + bord * 2 + 10, 10);
