@@ -133,7 +133,7 @@ function preload() {
 
 function setup() {
   var canvas = createCanvas(canvasWidth, canvasHeight);
-  settings.colsThread = mobileCheck() ? 53 : settings.colsThread;
+  settings.colsThread = mobileCheck() ? 38 : settings.colsThread;
 
   canvas.parent("main"); //display canvas centering on html
 
