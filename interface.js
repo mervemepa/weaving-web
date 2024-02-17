@@ -4,6 +4,7 @@ function initGUI() {
   button_change.mousePressed(button_change_handler);
   button_change.parent("change_tie-up");
   button_change.style("background-color", "#808080");
+  button_change.style("color", "#000000");
   button_change.style("font-family", "system-ui");
 
   var cleanButton = createButton("clean text"); //button for cleaning canvas and text
