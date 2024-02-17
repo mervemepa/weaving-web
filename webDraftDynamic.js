@@ -261,7 +261,7 @@ function draw() {
   text("shafts", (colsThread * w) / 2 + bord * 2 + 1, 2);
   text("tie-up", colsThread * w + bord * 2 + 5, 2);
   text("pedals", colsThread * w + bord * 2 + 5, rowsTieUp * h + bord * 3 + 3);
-  text("text draft", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 3);
+  text("woven tect draft", (colsThread * w) / 2, rowsTieUp * h + bord * 3 + 3);
 
   for (let i = 0; i < colsThread; i++) {
     for (let j = 0; j < rowsThread; j++) {
