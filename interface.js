@@ -12,6 +12,7 @@ function initGUI() {
   cleanButton.style("font-family", "system-ui");
   cleanButton.parent("clean");
   cleanButton.style("background-color", "#808080");
+  cleanButton.style("color", "#000000");
   cleanButton.mousePressed(cleanFull);
 
   var picButton = createButton("save as .jpg"); //button for save canvas as .jpg
@@ -19,6 +20,7 @@ function initGUI() {
   picButton.style("font-family", "system-ui");
   picButton.parent("jpg");
   picButton.style("background-color", "#808080");
+  picButton.style("color", "#000000");
   picButton.mousePressed(saveJpg); //hep bir sonrakini save ediyo
 
   var myButton = createButton("weave your text"); //submit button
@@ -26,6 +28,7 @@ function initGUI() {
   myButton.style("font-family", "system-ui");
   myButton.parent("send");
   myButton.style("background-color", "#808080");
+  myButton.style("color", "#000000");
   //myButton.mousePressed();
 
   var randomButton = createButton("word index"); //submit button
@@ -33,7 +36,7 @@ function initGUI() {
   randomButton.style("font-family", "system-ui");
   randomButton.parent("randombutton");
   randomButton.style("background-color", "#808080");
-  //randomButton.style("color", "#b4b2b2");
+  randomButton.style("color", "#000000");
   randomButton.mousePressed(random_word_handler);
 }
 
