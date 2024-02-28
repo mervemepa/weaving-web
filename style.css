@@ -72,9 +72,7 @@ canvas {
   font-family: system-ui;
   margin-top: 50px;
   margin-bottom: 25px;
-  /*position: absolute;
-  top: 0%;
-  left: 5px;*/
+
 }
 
 .info {
@@ -86,9 +84,7 @@ canvas {
   width: 100%;
   text-align: center;
   margin-bottom: 0px;
-  /*position: relative;
-  top: 5%;
-  left: 5px;*/
+ 
 }
 
 .apostrof {
@@ -137,21 +133,16 @@ canvas {
   margin-top: 10px;
   max-width: 800px;
   padding: 20px;
-  /*position: absolute;
-  top: 92%;
-  left: 10px; 640*/
+
 }
 
 .paragraph_0 span {
   transition: color 0.3s ease-in-out;
-  /* Renk değişimine yumuşak bir geçiş ekleyin */
 }
 
 .paragraph_0 span:hover {
   color: blue;
-  /* Cursor kelimelerin üzerine geldiğinde mavi renge dönüştür */
 
-  /* Cursor'un bir el (link) şeklinde görünmesini sağla */
 }
 
 .paragraph_1 {
@@ -165,9 +156,6 @@ canvas {
   line-height: 1.5;
   margin-bottom: 10px;
   width: 640px;
-  /*position: absolute;
-  top: 92%;
-  left: 10px;*/
 }
 
 .noligs {
