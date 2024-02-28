@@ -1,13 +1,10 @@
 class Draft {
   constructor(x, y, w, h, cl, char = "0") {
-    //constructor(x, y, w, h, value, char = "0") {
     this.x = x;
     this.y = y;
     this.w = w;
     this.h = h;
     this.cl = cl;
-    //this.value = value;
-    //this.letter = letter;
     this.passiveColor = "#ffffff";
     this.activeColor = "#000000";
     this.char = char;
