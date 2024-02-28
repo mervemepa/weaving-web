@@ -15,13 +15,7 @@ class numberBox {
 
   show() {
     strokeWeight(2);
-    //fill(this.cl);
-    //rect(this.x, this.y, this.w, this.h);
     fill(this.cl);
-    // rect(this.x, this.y, this.w, this.h);
     fill(0);
-    //threads ve pedalsın colon sayılarını kapattık
-    /*textSize(7);
-    text(this.char, this.x + this.w * 0.5, this.y + this.h * 0.5);*/
   }
 }

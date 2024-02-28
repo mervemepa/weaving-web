@@ -112,9 +112,7 @@ let shiftPedalVal = 0;
 let x = 0;
 let y = 0;
 //--------------------------------------------
-//var myButton; //button for entering text
 var myInp; //text input inside bar
-//let sliderBackgrnd;
 //--------------------------------------------
 let tieUpDataBase; //json file for tie up pattern types
 let tieUp_Data;
@@ -161,8 +159,6 @@ function setup() {
   inputTxt = " ";
   //input field
   myInp = createInput("Text something here!");
-  //myInp.position(colsThread * w + bord + colsTieUp * w + bord + 320, 93);
-  // myInp.position(610, colsThread * w + bord + colsTieUp * w + bord * 15);
   myInp.size(canvasWidth);
   myInp.style("border", "none");
   myInp.style("font-size", "12px");
@@ -223,7 +219,7 @@ function setup() {
 }
 
 //------------------------------------------------------
-//type ettiğimiz harfleri inputTxt ye atadım
+//assigns typed letters to inputTxt
 function typing() {
   inputTxt = this.value();
 
@@ -233,7 +229,6 @@ function typing() {
   }
 
   console.log(inputTxt);
-  //console.log("you are typing: ", this.value());
 }
 //------------------------------------------------------
 //random tie_up pattern generator
@@ -251,8 +246,6 @@ function tieUp_generator() {
 //------------------------------------------------------
 
 function draw() {
-  //background(settings.background);
-  //background(220);
   textAlign(LEFT);
   textSize(8);
   fill(50);
@@ -343,8 +336,6 @@ function getLetters(mx, my) {
         if (currentId < 0) {
           pedals[_i][colsThread + currentId].setClicked();
         } else {
-          // pedals[_i][currentId].setClicked();
-          //pedals[_i][currentId + inputTxt.length].setClicked();
           let _repNum = floor(colsThread / inputTxt.length);
           let _dif = colsThread - _repNum * inputTxt.length;
           for (let _k = 0; _k < _repNum; _k++) {
@@ -355,17 +346,6 @@ function getLetters(mx, my) {
     }
   }
 
-  //making green grid at tie up
-  /* for (let i = 0; i < colsTieUp; i++) {
-    for (let j = 0; j < rowsTieUp; j++) {
-      if (tieUp[i][j].isClicked(mx, my)) {
-        tieUp[i][j].getIsClicked();
-
-        clearPatternOnDrawDown();
-
-      }
-    }
-  }*/
   activeThreadsArr = activeThreads();
   activePedalsArr = activePedals();
   activeTieUpArr = activeTieUp();
@@ -373,8 +353,6 @@ function getLetters(mx, my) {
   tieUp_generator();
   displayPatternOnDrawDown();
 }
-
-//------------------------------------------------------------------
 
 //------------------------------------------------------------------
 function displayPatternOnDrawDown() {
@@ -497,13 +475,3 @@ function activeTieUp() {
 }
 
 //------------------------------------------------------
-
-/*function keyPressed() {
-  if (key == "0") {
-    clearCanvas();
-    clearText();
-  }
-  if (key == "1") {
-    save("yourPattern.jpg");
-  }
-}*/

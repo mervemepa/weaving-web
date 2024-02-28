@@ -13,5 +13,3 @@ The project considers the impacts of political and social contexts on personal g
 Weaving can be seen as an example of the connection between women and technology throughout history. In many cultures, weaving was traditionally a female activity and was essential for the reproduction of textiles. This role of women in weaving can be compared to the role of machines and tools in modern times. The correlation is being based on the fact that from the beginnings in a male dominated culture „women have always been the machine parts “being„ the means of reproducing the species, reproducing communications which is obviously similar to the role of machines and tools.
 
 These kinds of alternations— _something woven something unwoven, something computed something uncomputed, a story told a story left untold_—pervade the history of texts and textiles, just as they punctuate the history of computers and cybernetics.
-
-test

@@ -24,7 +24,7 @@ function initGUI() {
   picButton.style("background-color", "#808080");
   picButton.style("color", "#000000");
   picButton.style("box-shadow", "2px 2px 4px rgba(0, 0, 0, 0.2)");
-  picButton.mousePressed(saveJpg); //hep bir sonrakini save ediyo
+  picButton.mousePressed(saveJpg);
 
   var myButton = createButton("weave your text"); //submit button
   myButton.size(canvasWidth / 5, buttonHeight);
