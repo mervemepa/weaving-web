@@ -1,3 +1,8 @@
+//TextDraft/Weaving with Text
+//by Merve Mepa 2024
+//mervemepa@gmail.com
+//https://github.com/mervemepa
+
 window.mobileCheck = function () {
   let check = false;
   (function (a) {
